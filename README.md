@@ -1,3 +1,9 @@
+Team Members
+-Brian Timba
+-Jeffrey Gallardo
+-Paul Clement
+-Buchi Vitalis.
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
