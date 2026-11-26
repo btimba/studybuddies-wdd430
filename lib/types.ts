@@ -2,10 +2,12 @@ export type User = {
   id: number;
   name: string;
   email: string;
-  password: string;
+  password_hash: string;
   avatar_url: string | null;
   created_at: string;
 };
+
+export type PublicUser = Omit<User, "password_hash">;
 
 export type StudyGroup = {
   id: number;
@@ -36,7 +38,7 @@ export type StudySession = {
 export type Resource = {
   id: number;
   group_id: number;
-  uploaded_by: number;
+  uploaded_by: number | null;
   title: string;
   url: string;
   created_at: string;

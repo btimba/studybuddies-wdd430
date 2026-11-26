@@ -2,7 +2,7 @@ CREATE TABLE IF NOT EXISTS users (
   id         SERIAL PRIMARY KEY,
   name       TEXT        NOT NULL,
   email      TEXT        NOT NULL UNIQUE,
-  password   TEXT        NOT NULL,
+  password_hash TEXT     NOT NULL,
   avatar_url TEXT,
   created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
