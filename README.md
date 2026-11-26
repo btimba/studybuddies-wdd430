@@ -24,6 +24,25 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
+## Database setup and migrations
+
+Set `DATABASE_URL` to your Neon connection string in `.env.local`, then run:
+
+```bash
+npm run db:migrate
+```
+
+The command creates missing tables from `lib/schema.sql` and applies pending SQL
+files from `migrations/`, recording each applied file in `schema_migrations`.
+Treat `schema.sql` as the initial schema for new databases: `CREATE TABLE IF NOT
+EXISTS` does not update existing tables. For schema changes, add a new,
+numbered migration file instead.
+
+The password-column migration only renames `password` to `password_hash`; it
+does not hash existing values. Store only one-way password hashes (such as
+bcrypt or Argon2), and verify existing data before deploying the rename. This
+project does not currently contain authentication code.
+
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
 ## Learn More
