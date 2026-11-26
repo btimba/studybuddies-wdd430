@@ -2,7 +2,8 @@ Team Members
 -Brian Timba
 -Jeffrey Gallardo
 -Paul Clement
--Buchi Vitalis.
+-Buchi Vitalis
+-Othieno Malcom.
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
